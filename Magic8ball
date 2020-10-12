@@ -1,0 +1,35 @@
+import random
+
+answers = ['It is certain', 'It is decidedly so', 'Without a doubt', 'Yes – definitely', 'You may rely on it',
+           'As I see it, yes', 'Most likely', 'Outlook good', 'Yes Signs point to yes', 'Reply hazy', 'try again',
+           'Ask again later', 'Better not tell you now', 'Cannot predict now', 'Concentrate and ask again',
+           'Dont count on it', 'My reply is no', 'My sources say no', 'Outlook not so good', 'Very doubtful', 'If its not me, then its true', 'Look who"s asking lol']
+
+
+print('Hello M8, I am the Magic 8 Ball, What is your name?')
+name = input()
+print('Hello ' + name)
+
+
+def Magic8Ball():
+    print('What do you want to know?')
+    input()
+    print(answers[random.randint(0, len(answers) - 1)])
+    print('I hope that helped!')
+    Replay()
+
+
+def Replay():
+    print('Do you have another question? [y/n] ')
+    reply = input()
+    if reply == 'y':
+        Magic8Ball()
+    elif reply == 'n':
+
+         exit()
+    else:
+        print('Sorry, I didnt get you. Try again boi')
+        Replay()
+
+
+Magic8Ball()
